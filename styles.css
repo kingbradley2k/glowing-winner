@@ -1,0 +1,278 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --primary-color: #007BFF;
+  --secondary-color: #0056b3;
+  --accent-color: #ff4757;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1e1e1e;
+  --text-color: #f5f5f5;
+  --primary-color: #1e90ff;
+  --secondary-color: #007BFF;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Homepage */
+#home {
+  text-align: center;
+  padding: 100px 0;
+}
+
+#home h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.subheadline {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.cta {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.cta.secondary {
+  background-color: var(--secondary-color);
+}
+
+.key-features {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 60px;
+}
+
+.feature {
+  max-width: 300px;
+}
+
+.trust-signals {
+  margin-top: 60px;
+}
+
+.trust-signals p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.logos {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.logos img {
+  height: 50px;
+}
+
+/* Product Overview */
+#features {
+  padding: 80px 0;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.feature-item {
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.demo {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.demo img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Pricing */
+#pricing {
+  padding: 80px 0;
+}
+
+.pricing-plans {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.plan {
+  background-color: var(--bg-color);
+  border: 1px solid var(--primary-color);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.plan h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.plan .price {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.plan ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.plan ul li {
+  margin-bottom: 10px;
+}
+
+/* Resources */
+#resources {
+  padding: 80px 0;
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.resource {
+  background-color: var(--secondary-color);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+/* About Us */
+#about {
+  padding: 80px 0;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+/* Contact Us */
+#contact {
+  padding: 80px 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--primary-color);
+}
+
+form button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
