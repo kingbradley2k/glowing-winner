@@ -1,37 +1,30 @@
 /* General Styles */
+/* General Styles */
+/* General Styles */
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  background-color: white; /* Default light mode background */
+  color: #333333; /* Default light mode text color */
   transition: background-color 0.3s, color 0.3s;
 }
 
+/* Dark Mode Styles */
+body[data-theme="dark"] {
+  background-color: black; /* Dark mode background */
+  color: white; /* Dark mode text color */
+}
+
+/* Blue Color Scheme */
 :root {
-  --bg-color: #ffffff;
-  --text-color: #333333;
-  --primary-color: #007BFF;
-  --secondary-color: #0056b3;
-  --accent-color: #ff4757;
+  --primary-color: #007BFF; /* Blue color for buttons, links, etc. */
+  --secondary-color: #0056b3; /* Darker blue for hover states */
 }
 
-[data-theme="dark"] {
-  --bg-color: #1e1e1e;
-  --text-color: #f5f5f5;
-  --primary-color: #1e90ff;
-  --secondary-color: #007BFF;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Header */
+/* Header Styles */
 header {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color); /* Blue header */
   color: white;
   padding: 10px 0;
 }
@@ -66,39 +59,28 @@ nav {
   cursor: pointer;
 }
 
-/* Homepage */
-#home {
-  text-align: center;
-  padding: 100px 0;
-}
-
-#home h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.subheadline {
-  font-size: 20px;
-  margin-bottom: 40px;
-}
-
-.cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 40px;
-}
-
+/* Buttons and Links */
 .cta {
   background-color: var(--primary-color);
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
+  transition: background-color 0.3s;
 }
 
-.cta.secondary {
-  background-color: var(--secondary-color);
+.cta:hover {
+  background-color: var(--secondary-color); /* Darker blue on hover */
+}
+
+/* Example Section Styles */
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+section h2 {
+  color: var(--primary-color); /* Blue headings */
 }
 
 .key-features {
@@ -215,6 +197,105 @@ nav {
   color: white;
 }
 
+/* FAQs Section */
+/* FAQs Section */
+#faqs {
+  background: linear-gradient(to bottom, white 50%, #e6f7ff 50%); /* White and light blue gradient */
+  padding: 60px 0;
+}
+
+#faqs h2 {
+  text-align: center;
+  color: #007BFF; /* Blue heading */
+  margin-bottom: 40px;
+}
+
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.faq-item h3 {
+  padding: 15px 20px;
+  margin: 0;
+  cursor: pointer;
+  color: #333;
+  background-color: #f9f9f9;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.faq-item h3:hover {
+  background-color: #f1f1f1;
+}
+
+.faq-answer {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer p {
+  padding: 15px 0;
+  margin: 0;
+  color: #555;
+}
+
+/* Open state for FAQ items */
+.faq-item.active .faq-answer {
+  max-height: 200px; /* Adjust based on content */
+  padding: 15px 20px;
+}
+/* Full-Width Photo */
+.full-width-photo {
+  width: 100%;
+  overflow: hidden;
+  margin: 30px 0; /* Adjust spacing as needed */
+}
+
+.full-width-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* Partners Section */
+#partners {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.partner-logos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.partner-logos img {
+  height: 50px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.partner-logos img:hover {
+  opacity: 1;
+}
 /* About Us */
 #about {
   padding: 80px 0;
@@ -254,6 +335,33 @@ form input, form textarea {
   border-radius: 5px;
   border: 1px solid var(--primary-color);
 }
+/* Testimonials Section */
+#testimonials {
+  background-color: #f9f9f9;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.testimonial-carousel {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.testimonial {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+}
+
+.testimonial p {
+  font-style: italic;
+  color: #555;
+}
+
 
 form button {
   background-color: var(--primary-color);
@@ -267,6 +375,224 @@ form button {
 .contact-info {
   text-align: center;
   margin-top: 20px;
+}
+
+/* Hover effect for buttons */
+.cta:hover {
+  background-color: #0056b3; /* Darker blue */
+  transform: scale(1.05); /* Slightly enlarge */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for feature cards */
+.feature-item:hover {
+  transform: translateY(-10px); /* Move card up */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for testimonials */
+.testimonial:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for partner logos */
+.partner-logos img:hover {
+  opacity: 1; /* Make logo fully visible */
+  transform: scale(1.1); /* Slightly enlarge */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+/* Fade-in animation for sections */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+  opacity: 0; /* Start hidden */
+  animation: fadeIn 1s ease forwards; /* Apply animation */
+}
+
+/* Delay animations for each section */
+#home { animation-delay: 0.2s; }
+#features { animation-delay: 0.4s; }
+#pricing { animation-delay: 0.6s; }
+#resources { animation-delay: 0.8s; }
+#testimonials { animation-delay: 1s; }
+#faqs { animation-delay: 1.2s; }
+#partners { animation-delay: 1.4s; }
+#about { animation-delay: 1.6s; }
+#contact { animation-delay: 1.8s; }
+/* Active navbar link */
+.nav-links a.active {
+  color: #ff4757; /* Highlight color */
+  font-weight: bold;
+}
+/* Full-Width Photo with Overlay Sections */
+.photo-overlay-container {
+  position: relative;
+  width: 100%;
+  margin: 30px 0; /* Adjust spacing as needed */
+}
+
+.full-width-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0.7; /* Make the photo semi-transparent */
+  transition: opacity 0.3s ease;
+}
+
+.overlay-section {
+  position: absolute;
+  top: 0;
+  width: 45%; /* Each section takes 45% of the width */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.overlay-section.left {
+  left: 5%; /* Position on the left */
+}
+
+.overlay-section.right {
+  right: 5%; /* Position on the right */
+}
+
+/* Hover effect for the photo */
+.photo-overlay-container:hover .full-width-photo img {
+  opacity: 0.5; /* Make the photo more transparent on hover */
+}
+
+/* Hover effect for overlay sections */
+.overlay-section:hover {
+  background-color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
+}
+
+/* Full-Width Photo with Overlay Sections */
+.photo-overlay-container {
+  position: relative;
+  width: 100%;
+  margin: 30px 0; /* Adjust spacing as needed */
+}
+
+.full-width-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay-section {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+  width: 45%; /* Each section takes 45% of the width */
+  padding: 20px;
+  background-color: black; /* Black background */
+  color: #007BFF; /* blue text */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Dark shadow */
+}
+
+.overlay-section.left {
+  left: 5%; /* Position on the left */
+}
+
+.overlay-section.right {
+  right: 5%; /* Position on the right */
+}
+
+/* About Us Section */
+#about .team {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+#about .team-member {
+  text-align: center;
+}
+
+#about .team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+#about .team-member img:hover {
+  transform: scale(1.1); /* Enlarge team photos on hover */
+}
+
+/* Contact Us Section */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#contact form input,
+#contact form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #007BFF; /* Blue border */
+  background-color: #333; /* Dark input background */
+  color: white; /* White text */
+}
+
+#contact form input::placeholder,
+#contact form textarea::placeholder {
+  color: #ccc; /* Light gray placeholder text */
+}
+
+#contact form button {
+  background-color: #007BFF; /* Blue button */
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#contact form button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact-info p {
+  color: rgb(105, 34, 219); /* White text */
+}
+/* Scroll animation */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+header {
+  transition: background-color 0.5s ease;
+}
+
+.cta {
+  transition: background-color 0.5s ease, transform 0.5s ease;
 }
 
 /* Footer */
