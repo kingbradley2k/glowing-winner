@@ -80,7 +80,7 @@ section {
 }
 
 section h2 {
-  color: var(--primary-color); /* Blue headings */
+  color: black; /* Blue headings */
 }
 
 .key-features {
@@ -275,7 +275,7 @@ section h2 {
 }
 /* Partners Section */
 #partners {
-  background-color: #f9f9f9;
+  background-color: #c5b9f5;
   padding: 60px 0;
   text-align: center;
 }
@@ -350,7 +350,7 @@ form input, form textarea {
 }
 
 .testimonial {
-  background-color: white;
+  background-color: rgb(179, 201, 243);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -450,18 +450,18 @@ section {
   top: 0;
   width: 45%; /* Each section takes 45% of the width */
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+ /* background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease;
 }
 
 .overlay-section.left {
-  left: 5%; /* Position on the left */
+  left: 15%; /* Position on the left */
 }
 
 .overlay-section.right {
-  right: 5%; /* Position on the right */
+  right: 15%; /* Position on the right */
 }
 
 /* Hover effect for the photo */
@@ -471,7 +471,7 @@ section {
 
 /* Hover effect for overlay sections */
 .overlay-section:hover {
-  background-color: rgba(255, 255, 255, 1); /* Fully opaque on hover */
+  background-color: rgb(219, 205, 205); /* Fully opaque on hover */
 }
 
 /* Full-Width Photo with Overlay Sections */
@@ -493,8 +493,8 @@ section {
   transform: translateY(-50%); /* Center vertically */
   width: 45%; /* Each section takes 45% of the width */
   padding: 20px;
-  background-color: black; /* Black background */
-  color: #007BFF; /* blue text */
+  background-color: rgb(189, 183, 236); /* Black background */
+  color: #041020; /* blue text */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Dark shadow */
 }
@@ -542,7 +542,7 @@ section {
   border-radius: 5px;
   border: 1px solid #007BFF; /* Blue border */
   background-color: #333; /* Dark input background */
-  color: white; /* White text */
+  color: rgb(19, 2, 2); /* White text */
 }
 
 #contact form input::placeholder,
@@ -553,7 +553,7 @@ section {
 #contact form button {
   background-color: #007BFF; /* Blue button */
   color: white;
-  padding: 10px;
+  padding: 18px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -570,7 +570,7 @@ section {
 }
 
 .contact-info p {
-  color: rgb(105, 34, 219); /* White text */
+  color: rgb(3, 0, 7); /* White text */
 }
 /* Scroll animation */
 .animate-on-scroll {
