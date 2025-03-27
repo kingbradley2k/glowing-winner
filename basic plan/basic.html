@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecurityPro Basic Plan</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f7fa;
+        }
+        
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+        
+        h2 {
+            color: #007BFF;
+            border-bottom: 2px solid #007BFF;
+            padding-bottom: 8px;
+            margin-top: 40px;
+        }
+        
+        h3 {
+            color: #2c3e50;
+        }
+        
+        /* Training Modules */
+        .training-modules {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .module-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 5px 0 0;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background-color: #007BFF;
+            color: white;
+            border: 2px solid #007BFF;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: #007BFF;
+            border: 2px solid #007BFF;
+        }
+        
+        .btn-outline:hover {
+            background-color: #007BFF;
+            color: white;
+        }
+        
+        /* Quiz Container */
+        .quiz-container {
+            margin-top: 40px;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .training-modules {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SecurityPro Basic Plan</h1>
+        <p>$5/user/month • Core Training Modules • Basic Reporting</p>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Your Security Training Modules</h2>
+            <p>As a Basic Plan subscriber, you have access to these core training resources:</p>
+            
+            <div class="training-modules">
+                <!-- Module 1 -->
+                <div class="module-card">
+                    <h3>Phishing Awareness</h3>
+                    <p>Learn how to identify and avoid phishing attempts in emails and messages.</p>
+                    <a href="/docs/phishing-awareness.pdf" class="btn btn-primary" download>
+                        Download PDF Guide
+                    </a>
+                    <a href="#phishing-quiz" class="btn btn-outline">
+                        Take the Quiz
+                    </a>
+                </div>
+                
+                <!-- Module 2 -->
+                <div class="module-card">
+                    <h3>Password Security</h3>
+                    <p>Best practices for creating and managing strong, secure passwords.</p>
+                    <a href="/docs/password-security.pdf" class="btn btn-primary" download>
+                        Download PDF Guide
+                    </a>
+                    <a href="#password-quiz" class="btn btn-outline">
+                        Take the Quiz
+                    </a>
+                </div>
+                
+                <!-- Module 3 -->
+                <div class="module-card">
+                    <h3>Data Protection</h3>
+                    <p>How to properly handle and protect sensitive company data.</p>
+                    <a href="/docs/data-protection.pdf" class="btn btn-primary" download>
+                        Download PDF Guide
+                    </a>
+                    <a href="#data-quiz" class="btn btn-outline">
+                        Take the Quiz
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Phishing Quiz -->
+        <section id="phishing-quiz" class="quiz-container">
+            <h2>Phishing Awareness Quiz</h2>
+            <p>Test your knowledge after reviewing the Phishing Awareness guide.</p>
+            <iframe src="https://docs.google.com/forms/d/e/your-phishing-quiz-id/viewform?embedded=true" 
+                    width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+        </section>
+        
+        <!-- Password Quiz -->
+        <section id="password-quiz" class="quiz-container">
+            <h2>Password Security Quiz</h2>
+            <p>Test your knowledge about creating and managing secure passwords.</p>
+            <iframe src="https://docs.google.com/forms/d/e/your-password-quiz-id/viewform?embedded=true" 
+                    width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+        </section>
+        
+        <!-- Data Protection Quiz -->
+        <section id="data-quiz" class="quiz-container">
+            <h2>Data Protection Quiz</h2>
+            <p>Test your knowledge about handling sensitive data properly.</p>
+            <iframe src="https://docs.google.com/forms/d/e/your-data-quiz-id/viewform?embedded=true" 
+                    width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+        </section>
+        
+        <section>
+            <h2>Basic Reporting</h2>
+            <p>Your quiz results will be emailed to you and your administrator. For more detailed reporting, consider upgrading to our Professional Plan.</p>
+            <a href="/upgrade" class="btn btn-primary">
+                Upgrade to Professional Plan
+            </a>
+        </section>
+    </main>
+    
+    <footer style="margin-top: 50px; text-align: center; padding: 20px; color: #666;">
+        <p>&copy; 2023 SecurityPro. All rights reserved.</p>
+    </footer>
+</body>
+</html>
